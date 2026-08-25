@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Item {
+  id         String   @id @default(cuid())
+  name       String
+  price      Float
+  checked    Boolean  @default(false)
+  dateString String   // Format: YYYY-MM-DD
+  createdAt  DateTime @default(now())
+}
