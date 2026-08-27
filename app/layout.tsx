@@ -14,8 +14,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Shopping Checklist",
-  description: "Shopping Checklist App",
+  title: "Listy - Shopping List",
+  description: "รายการสั่งซื้อของคุณ",
+  appleWebApp: {
+    capable: true,
+    title: "Listy",
+    statusBarStyle: "default",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
