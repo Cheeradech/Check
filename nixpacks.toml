@@ -8,4 +8,4 @@ cmds = ["npm install"]
 cmds = ["npx prisma generate", "npm run build"]
 
 [start]
-cmd = "npx prisma db push && npm start"
+cmd = "npx prisma db push && npx next start -H 0.0.0.0 -p 3000"
